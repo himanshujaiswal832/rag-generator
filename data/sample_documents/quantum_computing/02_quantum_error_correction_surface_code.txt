@@ -1,0 +1,29 @@
+QUANTUM ERROR CORRECTION PROTOCOL: ROTATED PLANAR SURFACE CODE
+
+1. OVERVIEW AND CODE DISTANCE
+The fault-tolerant quantum computing layer implements a rotated planar surface code of code distance d = 5.
+A distance-5 surface code encodes a single logical qubit into a physical lattice comprising:
+- 25 data qubits (arranged in a rotated square grid)
+- 24 syndrome ancilla qubits (12 X-type stabilizer generators and 12 Z-type stabilizer generators)
+Total physical qubits per logical block: 49 physical qubits.
+
+2. LOGICAL ERROR SUPPRESSION AND THRESHOLDS
+The theoretical physical fault threshold for the surface code under circuit-level depolarizing noise is approximately p_th = 0.98% (approx 1.0%).
+Below this threshold, the logical error rate P_L decreases exponentially with increasing code distance according to the scaling relation:
+P_L = C * (p_phys / p_th) ** ((d + 1) / 2)
+Where:
+- p_phys is the physical gate and measurement error rate (currently measured at 0.18% across 2-qubit CZ gates).
+- C is an empirical prefactor approximately equal to 0.1.
+- For distance d = 5, the exponent (d + 1) / 2 equals 3.
+- At p_phys = 0.18%, the projected logical error per syndrome cycle is suppressed to approximately 5.8 x 10^-5.
+
+3. SYNDROME EXTRACTION CYCLES
+Stabilizer syndrome measurements are executed in repetitive rounds of duration tau_cycle = 240 ns:
+- Step 1 (40 ns): Reset ancilla qubits into |0> (for Z-stabilizers) or |+> (for X-stabilizers).
+- Step 2-5 (160 ns total, 40 ns per step): Four synchronized Controlled-Z (CZ) gates executing stabilizer interactions with neighboring data qubits in 'N-E-W-S' order.
+- Step 6 (40 ns): Dispersive microwave readout of ancilla states using Josephson Parametric Amplifiers (JPAs).
+
+4. DECODING ALGORITHMS
+Real-time syndrome decoding is performed using a Minimum-Weight Perfect Matching (MWPM) graph decoder accelerated on an AMD Xilinx UltraScale+ FPGA. 
+The decoder constructs a 3D spacetime decoding graph (2 spatial dimensions + 1 syndrome time dimension) where vertices represent non-trivial syndrome detections (defects) and edge weights correspond to log-likelihood ratios of physical error mechanisms. 
+Mean decoder latency is maintained below 1.2 microseconds per round, preventing backlog accumulation during sustained logical operations.

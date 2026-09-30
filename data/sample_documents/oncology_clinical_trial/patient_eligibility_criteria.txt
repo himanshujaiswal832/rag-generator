@@ -1,0 +1,25 @@
+PATIENT ELIGIBILITY CRITERIA (PROTOCOL TX-409-201)
+
+1. INCLUSION CRITERIA
+Candidates must fulfill all of the following conditions:
+1.1 Age >= 18 years at the time of signing informed consent.
+1.2 Histologically or cytologically confirmed unresectable locally advanced or metastatic adenocarcinoma of the stomach or gastroesophageal junction.
+1.3 Claudin-18.2 tumor expression: Centrally confirmed positive Claudin-18.2 expression defined as membrane staining in >= 70% of tumor cells with an intensity score of >= 2+ by validated immunohistochemistry (IHC) assay.
+1.4 Documented radiographic disease progression following at least one but no more than two prior lines of systemic chemotherapy (must include a platinum/fluoropyrimidine doublet).
+1.5 Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.
+1.6 Life expectancy >= 12 weeks.
+1.7 Adequate organ function within 14 days prior to Cycle 1 Day 1:
+    - Absolute Neutrophil Count (ANC) >= 1.5 x 10^9 / L
+    - Platelet count >= 100 x 10^9 / L
+    - Hemoglobin >= 9.0 g/dL
+    - Total bilirubin <= 1.5 x upper limit of normal (ULN)
+    - AST and ALT <= 2.5 x ULN (or <= 5.0 x ULN if liver metastases present)
+    - Calculated Creatinine Clearance >= 50 mL/min (Cockcroft-Gault formula).
+
+2. EXCLUSION CRITERIA
+Patients will be excluded if they meet any of the following:
+2.1 Active, untreated, or symptomatic central nervous system (CNS) metastases or carcinomatous meningitis.
+2.2 Prior therapeutic exposure to any Claudin-18.2-targeting antibody, antibody-drug conjugate (ADC), or CAR-T therapy.
+2.3 Severe or uncontrolled cardiac disease, including New York Heart Association (NYHA) Class III or IV congestive heart failure, unstable angina, or baseline corrected QT interval (QTcF) > 470 milliseconds.
+2.4 Major surgical procedure within 28 days prior to study initiation.
+2.5 Active autoimmune disease requiring systemic immunosuppressive therapy exceeding 10 mg/day prednisone equivalent.
